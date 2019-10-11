@@ -2,6 +2,13 @@ language: python
 python:
   - "3.6"      # current default Python on Travis CI
   - "3.7"
-# command to run tests
+
+addons:
+  sonarcloud:
+    organization: "andrelimabessa-github"
+    token:
+      secure: "4fee520a139c27b46fa843f3c12ea397b0d3170e"
+
+      # command to run tests
 script:
-  - pytest
+  - sonar-scanner
