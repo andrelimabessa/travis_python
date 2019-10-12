@@ -11,9 +11,9 @@ addons:
 
       # command to run tests
 install:
-  - pip install coverage
+  - pip install pytest pytest-cov
 script:
-  - coverage xml
+  - pytest --cov=./ --cov-report xml
   - sonar-scanner
   
 
