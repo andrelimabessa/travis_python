@@ -11,9 +11,8 @@ addons:
 
       # command to run tests
 install:
-  - pip install codecov
+  - pip install coverage
 script:
-  - sed -i 's/filename="/filename=".\//g' coverage.xml
-  - ( which sonar-scanner && sonar-scanner || true )
-after_success:
-  - codecov
+  - sonar-scanner
+  - coverage erase && coverage xml
+
