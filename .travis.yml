@@ -13,6 +13,7 @@ addons:
 install:
   - pip install coverage
 script:
+  - coverage xml
   - sonar-scanner
-  - coverage erase && coverage xml
+  
 
