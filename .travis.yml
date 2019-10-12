@@ -10,5 +10,10 @@ addons:
       secure: "4fee520a139c27b46fa843f3c12ea397b0d3170e"
 
       # command to run tests
+install:
+  - pip install codecov
 script:
-  - sonar-scanner
+  - sed -i 's/filename="/filename=".\//g' coverage.xml
+  - ( which sonar-scanner && sonar-scanner || true )
+after_success:
+  - codecov
