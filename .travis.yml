@@ -11,4 +11,4 @@ addons:
 
       # command to run tests
 script:
-  #- sonar-scanner
+  - sonar-scanner
