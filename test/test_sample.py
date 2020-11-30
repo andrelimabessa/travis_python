@@ -8,3 +8,6 @@ def test_stringToLower():
 
 def test_stringToUpper():
     assert string_func.stringToUpper("Andre") == 'ANDRE'
+
+def test_capitalizeString():
+    assert string_func.capitalizeString("linus") == 'Linus'
